@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>Certilab</name>
+    <license>GNU version 2</license>
+    <author>Fratris</author>
+    <authorEmail>ingenieria@fratris.com</authorEmail>
+    <authorUrl>http://www.fratris.com</authorUrl>
+    <creationDate>Febrero 2015</creationDate>
+    <copyright>(c) Fratris S.A.S</copyright>
+    <version>1.0.0</version>
+    <description>FACTURACION</description>
+
+
+
+    <install>
+        <sql>
+            <file driver="mysql"
+                  charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+
+    <uninstall>
+        <sql>
+            <file driver="mysql"
+                  charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <languages folder="site">
+         <language tag="en-GB">language/en-GB.com_certilab.ini</language>
+ 	    <language tag="es-ES">language/es-ES.com_certilab.ini</language>
+    </languages>
+
+    <languages folder="admin">
+         <language tag="en-GB">language/en-GB.com_certilab.ini</language>
+ 	    <language tag="es-ES">language/es-ES.com_certilab.ini</language>
+    </languages>
+
+    <media folder="media" destination="com_certilab">
+        <folder>assets</folder>
+
+    </media>
+
+
+    <files folder="site">
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>layouts</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <folder>layouts</folder>
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>certilab.php</filename>
+    </files>
+
+    <administration>
+       <!-- Administration Menu Section -->
+        <menu  link="option=com_facturacion">Certilab</menu>
+        <files folder="admin">
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>layouts</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <folder>layouts</folder>
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>certilab.php</filename>
+        </files>
+
+    </administration>
+</extension>

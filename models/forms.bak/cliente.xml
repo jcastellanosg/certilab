@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="myfields">
+
+
+        <field
+                name="personanatural"
+                type="radio"
+                class="btn-group"
+                label=""
+                description="Persona Natural"
+                labelclass="control-label">
+            <option value="">Tipo de Cliente</option>
+            <option value="0">Persona</option>
+            <option value="1">Empresa</option>
+        </field>
+
+        <field
+                name="crearusuario"
+                type="radio"
+                class="btn-group"
+                label=""
+                description="Persona Natural"
+                labelclass="control-label">
+            <option value="">Crear Usuario</option>
+            <option value="0">No</option>
+            <option value="1">Si</option>
+        </field>
+
+        <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+               readonly="true" class="readonly"
+               description="JGLOBAL_FIELD_ID_DESC"/>
+
+
+        <field name="nit" type="text" class="inputbox"
+               size="15" label="Nit"
+               description="Nit" required="true"/>
+
+
+        <field name="nombre" type="text" class="inputbox"
+               size="40" label="Nombre"
+               description="Nombre" required="true"/>
+
+
+        <field name="apellido" type="text" class="inputbox"
+               size="40" label="Apellido"
+               description="Apellido"/>
+
+        <field name="fechanacimiento" type="calendar"
+               label="fechanacimiento" description="fechanacimiento"
+               class="inputbox" size="22" format="%Y-%m-%d"
+               filter="user_utc"/>
+
+        <field name="email" type="email"
+               class="inputbox"
+               description="COM_FOLIO_FIELD_EMAIL_DESC"
+               label="JGLOBAL_EMAIL"
+               required="true"
+               size="30"
+               validate="email"
+                />
+
+        <field name="direccion," type="text" class="inputbox"
+               size="40" label="Direccion"
+               description="Direccion"/>
+
+        <field name="codigopostal" type="text" class="inputbox"
+               size="40" label="Codigo Postal"
+               description="Codigo Postal"/>
+
+        <field name="telefonofijo" type="text" class="inputbox"
+               size="40" label="Telefono Fijo"
+               description="Telefono Fijo"/>
+
+        <field name="telefonomovil" type="text" class="inputbox"
+               size="40" label="Telefono Movil"
+               description="Telefono Movil"/>
+
+        <field
+                name="estado"
+                type="sql"
+                default="10"
+                label="Estado"
+                description="Estado"
+                query="SELECT id AS value, estado AS estado FROM #__invoices_estados"/>
+
+        <field name="notas" type="text" class="inputbox"
+               size="190" label="Notas"
+               description="Notas"/>
+
+        <field
+                name="ciudad"
+                type="sql"
+                default="10"
+                label="Ciudad"
+                description="Ciudad"
+                query="SELECT id AS value, ciudad AS ciudad FROM #__invoices_ciudades"/>
+
+        <field
+                name="departamento"
+                type="sql"
+                default="10"
+                label="Departamento"
+                description="Departamento"
+                query="SELECT id AS value, departamento AS departamento FROM #__invoices_departamentos"/>
+        <field
+                name="pais"
+                type="sql"
+                default="10"
+                label="Pais"
+                description="Pais"
+                query="SELECT id AS value, pais AS pais FROM #__invoices_paises"/>
+
+    </fieldset>
+</form>
