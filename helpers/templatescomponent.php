@@ -292,6 +292,22 @@ XMLCOMPONENTE;
         <!DOCTYPE html><title></title>
 INDEX;
 
+    private $componente = <<<COMPONENTE
+<?php
+                defined('_JEXEC') or die;
+
+                //require_once JPATH_COMPONENT.'/helpers/helperfacturacion.php';
+
+                if (!JFactory::getUser()->authorise('core.manage', 'com_certilab')) {
+                    return;
+                }
+
+                #$#controller  = JControllerLegacy::getInstance('Certilab');
+                #$#controller->execute(JFactory::getApplication()->input->get('task'));
+                #$#controller->redirect();
+COMPONENTE;
+
+
 
     private function master($parameters)
     {
