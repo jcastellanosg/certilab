@@ -288,6 +288,10 @@ TABLE;
 
 XMLCOMPONENTE;
 
+    private $indexhtml = <<<INDEX
+        <!DOCTYPE html><title></title>
+INDEX;
+
 
     private function master($parameters)
     {
